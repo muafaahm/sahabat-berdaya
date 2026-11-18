@@ -1,4 +1,5 @@
 import './styles.css';
+import './overrides.css';
 
 const icons = {
   arrow: '↗',
@@ -54,6 +55,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="toast" id="toast">Terima kasih, niat baikmu sudah dicatat ♡</div>
 `;
 
+const founderPhoto = document.querySelector<HTMLDivElement>('.founder-photo');
+if (founderPhoto) {
+  founderPhoto.innerHTML = `<img src="${import.meta.env.BASE_URL}foto-pendiri.jpeg" alt="Foto asli Muafa Ahmad, pendiri Sahabat Berdaya" />`;
+}
 document.querySelector<HTMLElement>('#donasi .eyebrow')!.textContent = '04 · DONASI / KAMPANYE';
 document.querySelector<HTMLElement>('#kontak .eyebrow')!.textContent = '07 · KONTAK';
 
