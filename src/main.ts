@@ -73,6 +73,8 @@ if (contactPhone) {
   contactPhone.href = 'https://wa.me/6285866172781';
   contactPhone.firstChild!.textContent = '+62 858 6617 2781 ';
 }
+const aiDisclosure = document.querySelector<HTMLElement>('.footer-bottom span:last-child');
+if (aiDisclosure) aiDisclosure.textContent = 'AI disclosure: kode dibantu dengan ChatGPT';
 document.querySelector<HTMLElement>('#donasi .eyebrow')!.textContent = '04 · DONASI / KAMPANYE';
 document.querySelector<HTMLElement>('#kontak .eyebrow')!.textContent = '07 · KONTAK';
 
