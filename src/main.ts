@@ -57,8 +57,12 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 const founderPhoto = document.querySelector<HTMLDivElement>('.founder-photo');
 if (founderPhoto) {
-  founderPhoto.innerHTML = `<img src="${import.meta.env.BASE_URL}foto-pendiri.jpeg" alt="Foto asli Muafa Ahmad, pendiri Sahabat Berdaya" />`;
+  founderPhoto.innerHTML = `<img src="${import.meta.env.BASE_URL}foto-pendiri.jpeg" alt="Foto asli Ahmad Haris Mu'afa, pendiri Sahabat Berdaya" />`;
 }
+const founderName = document.querySelector<HTMLElement>('.founder b');
+const founderId = document.querySelector<HTMLElement>('.founder small');
+if (founderName) founderName.textContent = "Ahmad Haris Mu'afa";
+if (founderId) founderId.textContent = 'Pendiri & Ketua Lembaga · NIM 24108010111';
 document.querySelector<HTMLElement>('#donasi .eyebrow')!.textContent = '04 · DONASI / KAMPANYE';
 document.querySelector<HTMLElement>('#kontak .eyebrow')!.textContent = '07 · KONTAK';
 
