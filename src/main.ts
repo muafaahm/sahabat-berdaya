@@ -63,6 +63,16 @@ const founderName = document.querySelector<HTMLElement>('.founder b');
 const founderId = document.querySelector<HTMLElement>('.founder small');
 if (founderName) founderName.textContent = "Ahmad Haris Mu'afa";
 if (founderId) founderId.textContent = 'Pendiri & Ketua Lembaga · NIM 24108010111';
+const contactEmail = document.querySelector<HTMLAnchorElement>('.contact-info a[href^="mailto:"]');
+const contactPhone = document.querySelector<HTMLAnchorElement>('.contact-info a[href^="https://wa.me/"]');
+if (contactEmail) {
+  contactEmail.href = 'mailto:muafa.ahm@gmail.com';
+  contactEmail.firstChild!.textContent = 'muafa.ahm@gmail.com ';
+}
+if (contactPhone) {
+  contactPhone.href = 'https://wa.me/6285866172781';
+  contactPhone.firstChild!.textContent = '+62 858 6617 2781 ';
+}
 document.querySelector<HTMLElement>('#donasi .eyebrow')!.textContent = '04 · DONASI / KAMPANYE';
 document.querySelector<HTMLElement>('#kontak .eyebrow')!.textContent = '07 · KONTAK';
 
