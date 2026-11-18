@@ -54,6 +54,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="toast" id="toast">Terima kasih, niat baikmu sudah dicatat ♡</div>
 `;
 
+document.querySelector<HTMLElement>('#donasi .eyebrow')!.textContent = '04 · DONASI / KAMPANYE';
+document.querySelector<HTMLElement>('#kontak .eyebrow')!.textContent = '07 · KONTAK';
+
 document.querySelectorAll<HTMLButtonElement>('.filter').forEach(button => button.addEventListener('click', () => {
   document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
   button.classList.add('active');
