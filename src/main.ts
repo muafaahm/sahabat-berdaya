@@ -75,6 +75,9 @@ if (contactPhone) {
 }
 const aiDisclosure = document.querySelector<HTMLElement>('.footer-bottom span:last-child');
 if (aiDisclosure) aiDisclosure.textContent = 'AI disclosure: kode dibantu dengan ChatGPT';
+document.querySelector<HTMLElement>('.socials')?.remove();
+const copyright = document.querySelector<HTMLElement>('.footer-bottom span:first-child');
+if (copyright) copyright.textContent = '© 2026 Sahabat Berdaya. Semua kebaikan dijaga.';
 document.querySelector<HTMLElement>('#donasi .eyebrow')!.textContent = '04 · DONASI / KAMPANYE';
 document.querySelector<HTMLElement>('#kontak .eyebrow')!.textContent = '07 · KONTAK';
 
