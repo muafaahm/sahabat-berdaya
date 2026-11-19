@@ -78,6 +78,18 @@ if (aiDisclosure) aiDisclosure.textContent = 'AI disclosure: kode dibantu dengan
 document.querySelector<HTMLElement>('.socials')?.remove();
 const copyright = document.querySelector<HTMLElement>('.footer-bottom span:first-child');
 if (copyright) copyright.textContent = '© 2026 Sahabat Berdaya. Semua kebaikan dijaga.';
+const primaryNav = document.querySelector<HTMLElement>('.desktop-nav');
+if (primaryNav) {
+  primaryNav.innerHTML = [
+    ['#beranda', 'Beranda'],
+    ['#profil', 'Profil & Pengurus'],
+    ['#program', 'Program'],
+    ['#donasi', 'Donasi / Kampanye'],
+    ['#transparansi', 'Laporan & Transparansi'],
+    ['#galeri', 'Galeri Bukti'],
+    ['#kontak', 'Kontak'],
+  ].map(([href, label], index) => `<a class="${index === 0 ? 'active' : ''}" href="${href}">${label}</a>`).join('');
+}
 const revealSections = document.querySelectorAll<HTMLElement>('main > section');
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
