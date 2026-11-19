@@ -78,6 +78,20 @@ if (aiDisclosure) aiDisclosure.textContent = 'AI disclosure: kode dibantu dengan
 document.querySelector<HTMLElement>('.socials')?.remove();
 const copyright = document.querySelector<HTMLElement>('.footer-bottom span:first-child');
 if (copyright) copyright.textContent = '© 2026 Sahabat Berdaya. Semua kebaikan dijaga.';
+const revealSections = document.querySelectorAll<HTMLElement>('main > section');
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealSections.forEach((section, index) => {
+  section.classList.add('reveal-section');
+  if (index === 0) section.classList.add('is-visible');
+  revealObserver.observe(section);
+});
 document.querySelector<HTMLElement>('#donasi .eyebrow')!.textContent = '04 · DONASI / KAMPANYE';
 document.querySelector<HTMLElement>('#kontak .eyebrow')!.textContent = '07 · KONTAK';
 
